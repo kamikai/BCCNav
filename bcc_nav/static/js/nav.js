@@ -1,3 +1,6 @@
+
+var positionLocation;
+var positionDestination;
 var positionMarker;
 var positionTarget;
 var directionsDisplay;
@@ -5,7 +8,6 @@ var directionsService = new google.maps.DirectionsService();
 var positionWindow = new google.maps.InfoWindow({
     content: '<div id="content" onclick="setLocation()"> <button type="button" > Set Location </button> <button type="button" onclick="setDestination()"> Set Destination</button>  </div>'
 });
-
 function initialize() {
 
     var mapOptions = {
@@ -27,10 +29,8 @@ function initialize() {
         positionWindow.open(map, positionMarker);
 
     });
-
     directionsDisplay.setMap(map);
 }
-
 function setLocation() {
     if(positionLocation == null) {
         positionLocation = new google.maps.Marker({position: positionTarget.latLng, map: map});
@@ -38,6 +38,8 @@ function setLocation() {
         positionLocation.setMap(null);
         positionLocation = new google.maps.Marker({position: positionTarget.latLng, map: map});
     }
+
+
 }
 
 function setDestination() {
@@ -56,7 +58,6 @@ function removeDestinationMarkers(){
     positionDestination.setMap(null);
 
 }
-
 function calcRoute(destination) {
     var start = positionLocation.getPosition();
     var end = destination.getPosition();
@@ -71,5 +72,4 @@ function calcRoute(destination) {
         }
     });
 }
-
 google.maps.event.addDomListener(window, 'load', initialize);
