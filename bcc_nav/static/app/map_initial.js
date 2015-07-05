@@ -10,96 +10,11 @@ function clearMarkers() {
     setAllMap(null);
 }
 
-// Shows any markers currently in the array.
-function showMarkers() {
-    setAllMap(map);
-}
-
 // Deletes all markers in the array by removing references to them.
 function deleteMarkers() {
     clearMarkers();
     allmarkers = [];
     allmarkers2 = [];
-}
-
-function buttonCheck() {
-    if (ferryOn == true) {
-        addFerries()
-    }
-
-    if (libraryOn == true) {
-        addlibraries()
-    }
-
-    if (wifiOn == true) {
-        addWiFi()
-    }
-
-    if (busOn == true) {
-        addBuses()
-    }
-
-    if (bikeOn == true) {
-        addBikes()
-    }
-}
-
-function ferrySwap() {
-    ferryOn = ferryOn == false;
-    rePaint()
-}
-
-function librarySwap() {
-    libraryOn = libraryOn == false;
-    rePaint()
-}
-
-function wifiSwap() {
-    wifiOn = wifiOn == false;
-    rePaint()
-}
-
-function busSwap() {
-    busOn = busOn == false;
-    rePaint()
-}
-
-function bikeSwap() {
-    bikeOn = bikeOn == false;
-    rePaint()
-}
-
-function addBikes() {
-    /* bike racks */
-    for (i = 0; i < bikerackdata.length; i++) {
-        allmarkers.push(bikerackdata[i])
-    }
-}
-
-function addBuses() {
-    /* bus stops */
-    for (i = 0; i < busstopdata.length; i++) {
-        allmarkers.push(busstopdata[i])
-    }
-}
-
-function addWiFi() {
-    /* wi fi */
-    for (i = 0; i < wifidata.length; i++) {
-        allmarkers.push(wifidata[i])
-    }
-}
-
-function addlibraries() {
-    for (i = 0; i < librariesdata.length; i++) {
-        allmarkers.push(librariesdata[i])
-    }
-}
-
-function addFerries() {
-    for (i = 0; i < ferriesdata.length; i++) {
-        allmarkers.push(ferriesdata[i])
-    }
 }
 
 function renderMarkers() {
@@ -137,17 +52,9 @@ function addMarker(theposition, theicon, thetitle, theinfo) {
 
 }
 
-function rePaint() {
-    /* adds all the markers based on what buttons are checked then renders them */
-    deleteMarkers();
-    //buttonCheck();
-    renderMarkers();
-
-}
-
-var map;
-var allmarkers = [];
-var allmarkers2 = [];
+var map,
+    allmarkers = [];
+    allmarkers2 = [];
 
 function initialize() {
 
@@ -157,7 +64,9 @@ function initialize() {
         mapTypeId: google.maps.MapTypeId.TERRAIN
     };
 
-    map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+    var map_elem = document.getElementById('map-canvas');
+    console.log('Found elem: ' + map_elem);
+    map = new google.maps.Map(map_elem, mapOptions);
 
 }
 

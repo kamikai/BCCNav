@@ -15,21 +15,22 @@ body {
   position: static;
 }
 
-#map-canvas { height: 100%; margin: 0; padding: 0;}
+//#map-canvas { height: 100%; margin: 0; padding: 0;}
 
 
 .navbar {
   margin-bottom: 0;
   border: 1px solid transparent;
+
+  &-brand {
+    float: left;
+    height: 50px;
+    padding: 0;
+    font-size: 18px;
+    line-height: 20px;
+  }
 }
 
-.navbar-brand {
-  float: left;
-  height: 50px;
-  padding: 0;
-  font-size: 18px;
-  line-height: 20px;
-}
 
 #utility-box {
   position: absolute;

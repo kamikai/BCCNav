@@ -13,7 +13,7 @@
 
 {% block body %}
 
-    <div ng-app="BCCNavApp" ng-controller="BCCNavCtrl">
+    <div ng-app="BCCNavApp" ng-controller="BCCNavCtrl" ng-init="redraw()">
         <!-- Static navbar -->
         <nav class="navbar navbar-default">
             <div class="container-fluid">
@@ -42,8 +42,8 @@
                 </li>
             </ul>
         </div>
+        <div id="map-canvas"></div>
     </div>
-    <div id="map-canvas"></div>
 
     <script type="application/javascript" src="/static/app/map_initial.js"></script>
     <script type="application/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular.min.js"></script>
