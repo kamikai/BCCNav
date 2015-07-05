@@ -11,3 +11,9 @@ def main():
     """
 
     return render_template('index.html')
+
+@app.route('/About')
+def about():
+    """ About page.
+    """
+    return render_template('about.html')
