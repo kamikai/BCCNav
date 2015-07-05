@@ -140,7 +140,7 @@ function addMarker(theposition, theicon, thetitle, theinfo) {
 function rePaint() {
     /* adds all the markers based on what buttons are checked then renders them */
     deleteMarkers();
-    buttonCheck();
+    //buttonCheck();
     renderMarkers();
 
 }
@@ -148,11 +148,6 @@ function rePaint() {
 var map;
 var allmarkers = [];
 var allmarkers2 = [];
-var bikeOn = false;
-var busOn = false;
-var ferryOn = false;
-var libraryOn = false;
-var wifiOn = false;
 
 function initialize() {
 
@@ -162,8 +157,7 @@ function initialize() {
         mapTypeId: google.maps.MapTypeId.TERRAIN
     };
 
-    map = new google.maps.Map(document.getElementById('map-canvas'),
-        mapOptions);
+    map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
 }
 
