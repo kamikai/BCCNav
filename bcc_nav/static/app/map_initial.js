@@ -22,86 +22,6 @@ function deleteMarkers() {
     allmarkers2 = [];
 }
 
-function buttonCheck() {
-    if (ferryOn == true) {
-        addFerries()
-    }
-
-    if (libraryOn == true) {
-        addlibraries()
-    }
-
-    if (wifiOn == true) {
-        addWiFi()
-    }
-
-    if (busOn == true) {
-        addBuses()
-    }
-
-    if (bikeOn == true) {
-        addBikes()
-    }
-}
-
-function ferrySwap() {
-    ferryOn = ferryOn == false;
-    rePaint()
-}
-
-function librarySwap() {
-    libraryOn = libraryOn == false;
-    rePaint()
-}
-
-function wifiSwap() {
-    wifiOn = wifiOn == false;
-    rePaint()
-}
-
-function busSwap() {
-    busOn = busOn == false;
-    rePaint()
-}
-
-function bikeSwap() {
-    bikeOn = bikeOn == false;
-    rePaint()
-}
-
-function addBikes() {
-    /* bike racks */
-    for (i = 0; i < bikerackdata.length; i++) {
-        allmarkers.push(bikerackdata[i])
-    }
-}
-
-function addBuses() {
-    /* bus stops */
-    for (i = 0; i < busstopdata.length; i++) {
-        allmarkers.push(busstopdata[i])
-    }
-}
-
-function addWiFi() {
-    /* wi fi */
-    for (i = 0; i < wifidata.length; i++) {
-        allmarkers.push(wifidata[i])
-    }
-}
-
-function addlibraries() {
-    for (i = 0; i < librariesdata.length; i++) {
-        allmarkers.push(librariesdata[i])
-    }
-}
-
-function addFerries() {
-    for (i = 0; i < ferriesdata.length; i++) {
-        allmarkers.push(ferriesdata[i])
-    }
-}
-
 function renderMarkers() {
     for (i = 0; i < allmarkers.length; i++) {
         addMarker(new google.maps.LatLng(allmarkers[i][0],allmarkers[i][1]), allmarkers[i][2], allmarkers[i][3], allmarkers[i][4])
@@ -137,13 +57,6 @@ function addMarker(theposition, theicon, thetitle, theinfo) {
 
 }
 
-function rePaint() {
-    /* adds all the markers based on what buttons are checked then renders them */
-    deleteMarkers();
-    //buttonCheck();
-    renderMarkers();
-
-}
 
 var map;
 var allmarkers = [];
