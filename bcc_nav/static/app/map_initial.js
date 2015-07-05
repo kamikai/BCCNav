@@ -54,9 +54,7 @@ function addMarker(theposition, theicon, thetitle, theinfo) {
     });
 
     allmarkers2.push(marker);
-
 }
-
 
 var map;
 var allmarkers = [];
