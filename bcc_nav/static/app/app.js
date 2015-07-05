@@ -10,8 +10,8 @@ var app = angular.module('BCCNavApp', [])
             {title: 'Wifi Hotspots', key: 'wifi', display: false}
         ];
 
-        $scope.clicker = function () {
-
+        $scope.toggleUtility = function (utility) {
+            console.log('Toggleing utility: ' + utility.title + ', Now: ' + utility.display);
         }
 
     }]);

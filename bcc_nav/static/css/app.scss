@@ -2,9 +2,18 @@
 @import "nav_color";
 
 
-html { height: 100%; margin: 0; padding: 0;}
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 
-body { height: 100%; margin: 0; padding: 0;}
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: static;
+}
 
 #map-canvas { height: 100%; margin: 0; padding: 0;}
 
@@ -22,3 +31,35 @@ body { height: 100%; margin: 0; padding: 0;}
   line-height: 20px;
 }
 
+#utility-box {
+  position: absolute;
+  top: 85px;
+  right: 5px;
+  //width: 300px;
+  z-index: 10;
+
+  //border: 1px solid $bcc-color-active;
+  box-shadow: 1px 1px 5px #666666;
+  background-color: #ffffff;
+  padding: 0 15px;
+
+  font-variant: small-caps;
+
+  h1 {
+    padding-top: 0;
+  }
+
+  ul {
+    padding-left: 0;
+
+    li {
+      &:first-child {
+        border-top: 1px solid #AAAAAA;
+      }
+      list-style: none;
+      padding: 10px;
+      border-bottom: 1px solid #AAAAAA;
+    }
+  }
+
+}
