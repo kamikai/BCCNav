@@ -80,7 +80,8 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  position: static; }
+  position: static;
+  background: url("/static/img/cream_dust_bg.png"); }
 
 #map-canvas {
   height: 100%;

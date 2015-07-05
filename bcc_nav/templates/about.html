@@ -6,7 +6,7 @@
     <div class="container" style="margin-top: 100px;">
         <h1>BCCNav <small>One stop data shop!</small></h1>
 
-        <div style="margin: 0 auto; display: block;">
+        <div class="text-center">
             <img src="/static/img/BCCNav3.png">
         </div>
 
@@ -14,11 +14,44 @@
             Created over a weekend for GovHack 2015 BCCNac aims to be a central source of public utilities in Brisbane.
         </p>
 
+        <p>
+            BCCNav aims to emulate UQnav map which is a widely popular and well used app at UQ. BCCNav uses council map data from "https://www.data.brisbane.qld.gov.au" and "http://data.gov.au/" to serve up a one stop data shop for users.
+        </p>
+        <p>
+            After some exploring our team found nicely mapped out facilities online and the information was great however we couldn’t find a local map that included this data all in one spot. Just like UQNav we wanted a service that included a location based app that could hold all the data so we wouldn’t have to google for the data. This app is for all people who know Brisbane well and tourists and it will help people find local spots that are important to them.
+        </p>
+        <p>
+            The data we used was all in csv format which held the important latitude and longitude data of the facilities in Brisbane. The main data groups used was Bicycle parking, Bus stops, Wireless hotspots, libraries, ferries, drinking fountains, pools, boat ramps, clinics, public toilets, skate parks and tennis courts. We used the map data with the Google map API and acquired lovely icons from the map icon collection.
+        </p>
+        <p>
+            The further feature we simulated was a gps pathing tool that would run live whilst the user is using the BCCNav. The user could follow their path on the map whilst they go to their destination. A feature that would be great is a search tool that could find suburbs or facilities quickly and generate a path to them.
+        </p>
+        <p>
+            We feel our strongest prize category would be “BCC Best Use of City Resources” as we feel that the data sets we used will help people get to the city resources they need most.
+        </p>
+
+        <hr>
+
         <h2>The Team</h2>
         <div class="row">
-            <div class="col-md-4">Thomas Cranny</div>
-            <div class="col-md-4">John Kent</div>
-            <div class="col-md-4">Craig Winter</div>
+            <div class="col-md-4">
+                <div class="text-center">
+                    <img src="/static/img/team/thomas.jpg" class="img-circle" width="50%">
+                    <h3>Thomas Cranny</h3>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="text-center">
+                    <img src="/static/img/team/john.jpg" class="img-circle" width="50%">
+                    <h3>John Kent</h3>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="text-center">
+                    <img src="/static/img/team/craig.jpg" class="img-circle" width="50%">
+                    <h3>Craig Winter</h3>
+                </div>
+            </div>
         </div>
     </div>
 {% endblock %}
