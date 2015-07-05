@@ -4,11 +4,19 @@ var app = angular.module('BCCNavApp', [])
     .controller('BCCNavCtrl', ['$scope', function($scope) {
 
         $scope.utilities = [
-            {title: 'Bike Racks', key: 'bikeracks', display: false, markers: bikerackdata},
-            {title: 'Bus Stops', key: 'bus_stops', display: false, markers: busstopdata},
-            {title: 'Ferry Terminals', key: 'ferries', display: false, markers: ferriesdata},
-            {title: 'Libraries', key: 'libraries', display: false, markers: librariesdata},
-            {title: 'Wifi Hotspots', key: 'wifi', display: false, markers: wifidata}
+            {title: 'Bike Racks', display: false, markers: bikerackdata},
+            {title: 'Boat Ramps', display: false, markers: boatrampsdata},
+            {title: 'Bus Stops', display: false, markers: busstopdata},
+            {title: 'Clinics', display: false, markers: clinicsdata},
+            {title: 'Dog Parks', display: false, markers: dogdata},
+            {title: 'Drinking Fountains', display: false, markers: fountainsdata},
+            {title: 'Ferry Terminals', display: false, markers: ferriesdata},
+            {title: 'Libraries', display: false, markers: librariesdata},
+            {title: 'Pools', display: false, markers: poolsdata},
+            {title: 'Skate Parks', display: false, markers: skatedata},
+            {title: 'Tennis Courts', display: false, markers: tennisdata},
+            {title: 'Public Toilets', display: false, markers: toiletsdata},
+            {title: 'Wifi Hotspots', display: false, markers: wifidata}
         ];
 
         $scope.toggleUtility = function (utility) {
