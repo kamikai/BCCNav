@@ -26,7 +26,6 @@ var app = angular.module('BCCNavApp', [])
 
         $scope.redraw = function () {
             deleteMarkers();
-
             for (var i=0; i<$scope.utilities.length; i++) {
                 if ($scope.utilities[i].display) {
                     allmarkers.push.apply(allmarkers, $scope.utilities[i].markers);

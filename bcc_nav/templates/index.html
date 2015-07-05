@@ -46,7 +46,7 @@
             <ul>
                 <li ng-repeat="utility in utilities">
                     <input type="checkbox" ng-model="utility.display" ng-click="toggleUtility(utility)">
-                    <span ng-bind="utility.title"></span>
+                    <span>{[utility.title]} ( {[utility.markers.length]} )</span>
                 </li>
             </ul>
         </div>
