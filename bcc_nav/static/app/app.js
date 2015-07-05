@@ -24,9 +24,8 @@ var app = angular.module('BCCNavApp', [])
                     allmarkers.push.apply(allmarkers, $scope.utilities[i].markers);
                 }
             }
-            renderMarkers();
         };
-
+        console.log('Scope!');
     }]);
 
 /* Modify angular to not conflict with Jinja template tags. */
